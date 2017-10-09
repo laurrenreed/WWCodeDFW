@@ -1,0 +1,6 @@
+framework module Pods_WWCodeDFW {
+  umbrella header "Pods-WWCodeDFW-umbrella.h"
+
+  export *
+  module * { export * }
+}
