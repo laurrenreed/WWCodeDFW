@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'WWCodeDFW' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WWCodeDFW
+
+    # SnapKit
+    pod 'SnapKit', '~> 3.0.0’
+
+    # AlamoFire
+    pod 'Alamofire', '~> 4.5'
+
+    # SwiftLint 
+    pod 'SwiftLint'
+
+end

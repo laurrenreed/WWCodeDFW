@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.1)
+  - SnapKit (3.0.2)
+  - SwiftLint (0.23.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.5)
+  - SnapKit (~> 3.0.0)
+  - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SwiftLint: 6ddf7d305644c2239cb768a11d97cce804816691
+
+PODFILE CHECKSUM: a8385753ae56bce8c57fafdfe2e7026e5e3ce523
+
+COCOAPODS: 1.3.1
