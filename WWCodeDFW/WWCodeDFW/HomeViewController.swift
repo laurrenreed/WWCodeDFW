@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Home"
         
         let label = UILabel.init()
         label.text = "Hello, world!"
