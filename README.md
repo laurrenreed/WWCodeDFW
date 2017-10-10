@@ -1,7 +1,7 @@
 # WWCodeDFW
 iOS app for Women Who Code DFW
 
-https://projects.invisionapp.com/d/main/default/#/console/12233982/257460167/preview
+https://invis.io/SFDV9GZW9#/257460173_Jobs_Page
 
 Getting Started with the Project - https://medium.com/@laurrenreed_40373/getting-started-with-wwcodedfw-ios-workspace-706099108f10
 1. Clone down the repo - https://help.github.com/articles/cloning-a-repository/
