@@ -1,3 +1,5 @@
+![Women Who Code Logo](README_assets/logo.png)
+
 # WWCodeDFW
 iOS app for Women Who Code DFW
 
@@ -19,6 +21,3 @@ https://medium.com/@laurrenreed_40373/getting-started-with-wwcodedfw-ios-workspa
 1. Snapkit - https://github.com/SnapKit/SnapKit 
 2. Alamofire - https://github.com/Alamofire/Alamofire
 3. SwiftLint - https://github.com/realm/SwiftLint
-
-
-![Women Who Code Logo](README_assets/logo.png)
