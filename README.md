@@ -1,4 +1,4 @@
-![Women Who Code Logo](README_assets/logo.png)
+<img src="README_assets/logo.png" alt="Women Who Code Logo" style="width: 250px; height: auto;">
 
 # WWCodeDFW
 iOS app for Women Who Code DFW
