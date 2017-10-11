@@ -14,8 +14,8 @@ colon:
 
 excluded:
   - Pods
-  - AxxessCARETests
-  - DuctTapeUITests
+  - WWCodeDFWTests
+  - WWCodeDFWUITests
 
 line_length:
   - 150 # Warning
