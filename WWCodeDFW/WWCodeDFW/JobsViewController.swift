@@ -12,6 +12,7 @@ class JobsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
 
         // Do any additional setup after loading the view.
     }
