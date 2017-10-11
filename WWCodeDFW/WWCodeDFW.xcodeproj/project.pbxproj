@@ -15,6 +15,11 @@
 		6E7B99F21F8BA636006A5343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7B99F01F8BA636006A5343 /* LaunchScreen.storyboard */; };
 		6E7B99FD1F8BA636006A5343 /* WWCodeDFWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B99FC1F8BA636006A5343 /* WWCodeDFWTests.swift */; };
 		6E7B9A081F8BA636006A5343 /* WWCodeDFWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B9A071F8BA636006A5343 /* WWCodeDFWUITests.swift */; };
+		CC5022CB1F8D8CBD00A4EA5E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */; };
+		CC5022CC1F8D8CBD00A4EA5E /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */; };
+		CC5022CD1F8D8CBD00A4EA5E /* NetworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022CA1F8D8CBC00A4EA5E /* NetworksViewController.swift */; };
+		CC5022CF1F8D8DB000A4EA5E /* DonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022CE1F8D8DB000A4EA5E /* DonationsViewController.swift */; };
+		CC5022D11F8D941E00A4EA5E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022D01F8D941E00A4EA5E /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		6E7B9A091F8BA636006A5343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BCB744A013EC0E3ED63AEBC /* Pods_WWCodeDFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWCodeDFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C717CE2D870C318747D89E /* Pods-WWCodeDFW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWCodeDFW.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW.release.xcconfig"; sourceTree = "<group>"; };
+		CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		CC5022CA1F8D8CBC00A4EA5E /* NetworksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworksViewController.swift; sourceTree = "<group>"; };
+		CC5022CE1F8D8DB000A4EA5E /* DonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsViewController.swift; sourceTree = "<group>"; };
+		CC5022D01F8D941E00A4EA5E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				6E7B99E71F8BA636006A5343 /* AppDelegate.swift */,
+				CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */,
+				CC5022CE1F8D8DB000A4EA5E /* DonationsViewController.swift */,
+				CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */,
+				CC5022CA1F8D8CBC00A4EA5E /* NetworksViewController.swift */,
 				6E7B99E91F8BA636006A5343 /* HomeViewController.swift */,
+				CC5022D01F8D941E00A4EA5E /* UIViewControllerExtensions.swift */,
 				6E7B99EB1F8BA636006A5343 /* Main.storyboard */,
 				6E7B9A161F8BB34F006A5343 /* Resources */,
 			);
@@ -364,8 +379,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC5022CF1F8D8DB000A4EA5E /* DonationsViewController.swift in Sources */,
+				CC5022CC1F8D8CBD00A4EA5E /* JobsViewController.swift in Sources */,
+				CC5022CB1F8D8CBD00A4EA5E /* AboutViewController.swift in Sources */,
 				6E7B99EA1F8BA636006A5343 /* HomeViewController.swift in Sources */,
+				CC5022CD1F8D8CBD00A4EA5E /* NetworksViewController.swift in Sources */,
 				6E7B99E81F8BA636006A5343 /* AppDelegate.swift in Sources */,
+				CC5022D11F8D941E00A4EA5E /* UIViewControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
