@@ -53,4 +53,18 @@ class MediumServiceTests: XCTestCase {
             }
         }
     }
+    
+    func testFetchingPostFromAuthorAndSlug() {
+        let mockApiService = MockApiService()
+        let mediumService = MediumService(apiService: mockApiService)
+        
+        mediumService.sendRequest(for: .fetchPost(username: "laurrenreed_40373", postSlug: "contributing-to-wwcodedfw-ios-project-c9d900bf5c66")) { (response) in
+            switch response {
+            case .success(let post):
+                XCTAssertTrue(post is MediumPost)
+            case .failure(_):
+                XCTFail("testFetchingPostFromAuthorAndSlug failed to find a MediumPost")
+            }
+        }
+    }
 }

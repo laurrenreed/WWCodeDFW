@@ -19,6 +19,7 @@
 		AB50C8BC1F987CB4001B8691 /* MediumPostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BB1F987CB4001B8691 /* MediumPostCollection.swift */; };
 		AB50C8BE1F988102001B8691 /* MediumPostCollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BD1F988102001B8691 /* MediumPostCollectionParser.swift */; };
 		AB50C8C01F9881BD001B8691 /* MediumAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BF1F9881BD001B8691 /* MediumAuthor.swift */; };
+		AB50C8C21F988B78001B8691 /* medium_post_response.json in Resources */ = {isa = PBXBuildFile; fileRef = AB50C8C11F988B78001B8691 /* medium_post_response.json */; };
 		ABAA17671F9859840094B10E /* MediumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17661F9859840094B10E /* MediumService.swift */; };
 		ABAA17691F985AFB0094B10E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17681F985AFB0094B10E /* ApiService.swift */; };
 		ABAA17711F9860020094B10E /* MediumServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17701F9860020094B10E /* MediumServiceTests.swift */; };
@@ -70,6 +71,7 @@
 		AB50C8BB1F987CB4001B8691 /* MediumPostCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPostCollection.swift; sourceTree = "<group>"; };
 		AB50C8BD1F988102001B8691 /* MediumPostCollectionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPostCollectionParser.swift; sourceTree = "<group>"; };
 		AB50C8BF1F9881BD001B8691 /* MediumAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAuthor.swift; sourceTree = "<group>"; };
+		AB50C8C11F988B78001B8691 /* medium_post_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_post_response.json; sourceTree = "<group>"; };
 		ABAA17661F9859840094B10E /* MediumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumService.swift; sourceTree = "<group>"; };
 		ABAA17681F985AFB0094B10E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		ABAA17701F9860020094B10E /* MediumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumServiceTests.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				ABAA17731F9860A50094B10E /* medium_tags_response.json */,
+				AB50C8C11F988B78001B8691 /* medium_post_response.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAA17741F9860A50094B10E /* medium_tags_response.json in Resources */,
+				AB50C8C21F988B78001B8691 /* medium_post_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

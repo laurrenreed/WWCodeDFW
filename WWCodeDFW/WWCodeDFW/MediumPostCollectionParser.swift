@@ -15,12 +15,13 @@ class MediumPostCollectionParser {
     
     init?(json: [String: Any]) {
         guard let payload = json["payload"] as? [String: Any],
+              let references = payload["references"] as? [String: Any],
+              let authorMap = references["User"] as? [String: Any],
+              let pagingJson = payload["paging"] as? [String: Any],
               let value = payload["value"] as? [String: Any]
               else { return nil }
         
-        if let authorMap = value["User"] as? [String: Any],
-           let postsArray = value["posts"] as? [[String: Any]],
-           let pagingJson = value["paging"] as? [String: Any] {
+        if let postsArray = value["posts"] as? [[String: Any]] {
             self.authorMap = authorMap
             self.postsArray = postsArray
             self.pagingJson = pagingJson
