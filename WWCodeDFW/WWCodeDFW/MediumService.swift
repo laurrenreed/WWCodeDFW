@@ -51,14 +51,22 @@ enum MediumResource: Resource {
     
     // MARK: Parsing
     
-    private func parseListPosts(data: Data) -> Model? {
+    private func parseDataToJson(data: Data) -> [String: Any]? {
         guard let string = String(data: data, encoding: .utf8)
             else { print("[MediumResource] Failed to decode data to string for listing posts"); return nil }
         
         let strippedString = string.replacingOccurrences(of: "])}while(1);</x>", with: "")
         if let strippedData = strippedString.data(using: .utf8),
-           let jsonObject = try? JSONSerialization.jsonObject(with: strippedData, options: .allowFragments),
-           let json = jsonObject as? [String: Any] {
+            let jsonObject = try? JSONSerialization.jsonObject(with: strippedData, options: .allowFragments),
+            let json = jsonObject as? [String: Any] {
+            return json
+        }
+        
+        return nil
+    }
+    
+    private func parseListPosts(data: Data) -> Model? {
+        if let json = parseDataToJson(data: data) {
             return modelType.init(json: json)
         } else {
             print("[MediumResource] Failed to parse json string for listing posts")
