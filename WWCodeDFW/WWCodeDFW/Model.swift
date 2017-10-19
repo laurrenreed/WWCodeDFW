@@ -7,5 +7,5 @@
 //
 
 protocol Model {
-    init(json: [String: Any])
+    init?(json: [String: Any])
 }

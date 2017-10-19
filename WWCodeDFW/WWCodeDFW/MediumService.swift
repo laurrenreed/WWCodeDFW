@@ -11,15 +11,15 @@ import Alamofire
 
 enum MediumResource: Resource {
     case listPosts(tag: String)
-    case fetchPost(id: String)
+    case fetchPost(username: String, postSlug: String)
     
     var url: URLConvertible {
         let baseUrl = "https://medium.com/"
         switch self {
         case .listPosts(let tag):
             return "\(baseUrl)search?q=\(tag.lowercased())&format=json"
-        case .fetchPost(let id):
-            return "\(baseUrl)"
+        case .fetchPost(let username, let postSlug):
+            return "\(baseUrl)@\(username)/\(postSlug)?format=json"
         }
     }
     
@@ -67,7 +67,8 @@ enum MediumResource: Resource {
     
     private func parseListPosts(data: Data) -> Model? {
         if let json = parseDataToJson(data: data) {
-            return modelType.init(json: json)
+            let postCollectionParser = MediumPostCollectionParser(json: json)
+            return postCollectionParser?.parse()
         } else {
             print("[MediumResource] Failed to parse json string for listing posts")
             return nil
