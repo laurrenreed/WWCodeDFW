@@ -11,6 +11,7 @@ import Alamofire
 
 enum ApiServiceError: Error {
     case modelParsingError
+    case invalidResourceError
 }
 
 enum ApiResult<T> {
@@ -37,13 +38,18 @@ enum ApiResult<T> {
 }
 
 protocol Resource {
+    /// HTTP Method the API request will use
     var method: HTTPMethod { get }
+    /// URL to send API request to
     var url: URLConvertible { get }
+    /// Type of Model the resource will parse the json response into
     var modelType: Model.Type { get }
+    /// Hook for determining how json is parsed into the Model
     func parse(responseData: Data) -> Model?
 }
 
 protocol ApiServicing {
+    /// Makes a network request to the parameterized Resource and responseds with the parsed Model object
     func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void)
 }
 
