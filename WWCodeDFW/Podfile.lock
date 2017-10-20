@@ -2,17 +2,20 @@ PODS:
   - Alamofire (4.5.1)
   - SnapKit (3.0.2)
   - SwiftLint (0.23.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - SnapKit (~> 3.0.0)
   - SwiftLint
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftLint: 6ddf7d305644c2239cb768a11d97cce804816691
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: a8385753ae56bce8c57fafdfe2e7026e5e3ce523
+PODFILE CHECKSUM: cf0dec5dff3c2a442745cbd029e92615aff683c5
 
 COCOAPODS: 1.3.1
