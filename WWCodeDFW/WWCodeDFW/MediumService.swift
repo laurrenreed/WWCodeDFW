@@ -43,7 +43,7 @@ enum MediumResource: Resource {
     
     func parse(responseData: Data) -> Model? {
         if let json = parseDataToJson(data: responseData) {
-            return modelType.init(json: json)
+            return modelType.init(json: json["payload"])
         } else {
             print("[MediumResource] Failed to parse json string for resource \(self)")
             return nil

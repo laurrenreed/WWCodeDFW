@@ -13,11 +13,11 @@ class MediumPostCollectionParser {
     let postPreviewsJson: [JSON]
     
     init?(json: JSON) {
-        guard let postsJson = json["payload"]["value"]["posts"].array else { return nil }
+        guard let postsJson = json["value"]["posts"].array else { return nil }
      
-        let authorMap = json["payload"]["references"]["User"]
+        let authorMap = json["references"]["User"]
         let postsArray = postsJson
-        let pagingJson = json["payload"]["paging"]
+        let pagingJson = json["paging"]
         
         let postPreviewsJson = postsArray.flatMap { (postJson) -> JSON? in
             guard let authorId = postJson["creatorId"].string else { return nil }

@@ -25,7 +25,6 @@
 		ABAA17691F985AFB0094B10E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17681F985AFB0094B10E /* ApiService.swift */; };
 		ABAA17711F9860020094B10E /* MediumServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17701F9860020094B10E /* MediumServiceTests.swift */; };
 		ABAA17741F9860A50094B10E /* medium_tags_response.json in Resources */ = {isa = PBXBuildFile; fileRef = ABAA17731F9860A50094B10E /* medium_tags_response.json */; };
-		ABAA17791F9874610094B10E /* MediumResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17781F9874610094B10E /* MediumResourceTests.swift */; };
 		ABC62F371F987AF2000BDC75 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC62F361F987AF2000BDC75 /* Model.swift */; };
 		CC5022CB1F8D8CBD00A4EA5E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */; };
 		CC5022CC1F8D8CBD00A4EA5E /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */; };
@@ -78,7 +77,6 @@
 		ABAA17681F985AFB0094B10E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		ABAA17701F9860020094B10E /* MediumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumServiceTests.swift; sourceTree = "<group>"; };
 		ABAA17731F9860A50094B10E /* medium_tags_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_tags_response.json; sourceTree = "<group>"; };
-		ABAA17781F9874610094B10E /* MediumResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumResourceTests.swift; sourceTree = "<group>"; };
 		ABC62F361F987AF2000BDC75 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				ABAA17701F9860020094B10E /* MediumServiceTests.swift */,
-				ABAA17781F9874610094B10E /* MediumResourceTests.swift */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -466,7 +463,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAA17711F9860020094B10E /* MediumServiceTests.swift in Sources */,
-				ABAA17791F9874610094B10E /* MediumResourceTests.swift in Sources */,
 				6E7B99FD1F8BA636006A5343 /* WWCodeDFWTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

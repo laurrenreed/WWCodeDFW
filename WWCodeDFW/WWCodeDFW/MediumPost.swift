@@ -20,7 +20,8 @@ class MediumPost: Model {
             let title = json["value"]["title"].string,
             let slug = json["value"]["uniqueSlug"].string,
             let createdAt = json["value"]["createdAt"].double,
-            let author = MediumAuthor(json: json["references"]["User"])
+            let creatorId = json["value"]["creatorId"].string,
+            let author = MediumAuthor(json: json["references"]["User"][creatorId])
             else { return nil }
         
         self.id = id
@@ -46,4 +47,3 @@ class MediumPostParagraph: Model {
         self.name = name
     }
 }
-
