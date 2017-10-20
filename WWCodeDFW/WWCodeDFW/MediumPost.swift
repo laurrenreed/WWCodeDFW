@@ -13,6 +13,7 @@ class MediumPost: Model {
     let slug: String
     let createdAt: Date
     let author: MediumAuthor
+    let paragraphs: [MediumPostParagraph]
     
     required init?(json: JSON) {
         guard let id = json["value"]["id"].string,
@@ -27,12 +28,22 @@ class MediumPost: Model {
         self.slug = slug
         self.createdAt = Date(timeIntervalSince1970: createdAt)
         self.author = author
+        self.paragraphs = (json["value"]["content"]["bodyModel"]["paragraphs"].array ?? [])
+            .flatMap { MediumPostParagraph(json: $0) }
     }
 }
-//
-//class MediumPostParagraph: Model {
-//    required init?(json: [String: Any]) {
-//
-//    }
-//}
+
+class MediumPostParagraph: Model {
+    let text: String
+    let name: String
+    
+    required init?(json: JSON) {
+        guard let text = json["text"].string,
+            let name = json["name"].string
+            else { return nil}
+        
+        self.text = text
+        self.name = name
+    }
+}
 

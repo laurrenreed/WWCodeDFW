@@ -9,19 +9,16 @@
 import SwiftyJSON
 
 class MediumPostCollectionParser {
-    let postsArray: [JSON]
-    let authorMap: JSON
     let pagingJson: JSON
+    let postPreviewsJson: [JSON]
     
     init?(json: JSON) {
         guard let postsJson = json["payload"]["value"]["posts"].array else { return nil }
      
-        self.authorMap = json["payload"]["references"]["User"]
-        self.postsArray = postsJson
-        self.pagingJson = json["payload"]["paging"]
-    }
-    
-    func parse() -> MediumPostCollection? {
+        let authorMap = json["payload"]["references"]["User"]
+        let postsArray = postsJson
+        let pagingJson = json["payload"]["paging"]
+        
         let postPreviewsJson = postsArray.flatMap { (postJson) -> JSON? in
             guard let authorId = postJson["creatorId"].string else { return nil }
             
@@ -30,11 +27,7 @@ class MediumPostCollectionParser {
             return json
         }
         
-        let json: [String: Any] = [
-            "paging": pagingJson,
-            "posts": postPreviewsJson
-        ]
-        
-        return MediumPostCollection(json: JSON(json))
+        self.pagingJson = pagingJson
+        self.postPreviewsJson = postPreviewsJson
     }
 }

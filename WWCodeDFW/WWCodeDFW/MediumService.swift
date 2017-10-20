@@ -42,10 +42,10 @@ enum MediumResource: Resource {
     }
     
     func parse(responseData: Data) -> Model? {
-        switch self {
-        case .listPosts:
-            return parseListPosts(data: responseData)
-        case .fetchPost:
+        if let json = parseDataToJson(data: responseData) {
+            return modelType.init(json: json)
+        } else {
+            print("[MediumResource] Failed to parse json string for resource \(self)")
             return nil
         }
     }
@@ -62,16 +62,6 @@ enum MediumResource: Resource {
         }
         
         return nil
-    }
-    
-    private func parseListPosts(data: Data) -> Model? {
-        if let json = parseDataToJson(data: data) {
-            let postCollectionParser = MediumPostCollectionParser(json: json)
-            return postCollectionParser?.parse()
-        } else {
-            print("[MediumResource] Failed to parse json string for listing posts")
-            return nil
-        }
     }
 }
 
