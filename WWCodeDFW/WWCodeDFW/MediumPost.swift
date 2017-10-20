@@ -7,22 +7,24 @@
 //
 import Foundation
 
-class MediumPostPreview: Model {
+class MediumPost: Model {
     let id: String
     let title: String
     let slug: String
     let createdAt: Date
     let author: MediumAuthor
     
-    
     required init?(json: [String: Any]) {
-        guard let id = json["id"] as? String,
-              let title = json["title"] as? String,
-              let slug = json["uniqueSlug"] as? String,
-              let createdAt = json["createdAt"] as? Int,
-              let authorJson = json["author"] as? [String: Any],
-              let author = MediumAuthor(json: authorJson)
-              else { return nil }
+        guard let value = json["value"] as? [String: Any],
+            let references = json["references"] as? [String: Any],
+            let id = value["id"] as? String,
+            let title = value["title"] as? String,
+            let slug = value["uniqueSlug"] as? String,
+            let createdAt = value["createdAt"] as? Int,
+            let authorJson = references["User"] as? [String: Any],
+            let author = MediumAuthor(json: authorJson),
+            let content = value["content"] as? [String: Any]
+            else { return nil }
         
         self.id = id
         self.title = title
@@ -32,7 +34,7 @@ class MediumPostPreview: Model {
     }
 }
 
-class MediumPost: Model {
+class MediumPostParagraph: Model {
     required init?(json: [String: Any]) {
         
     }
