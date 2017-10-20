@@ -6,6 +6,8 @@
 //  Copyright © 2017 WWCode. All rights reserved.
 //
 
+import SwiftyJSON
+
 protocol Model {
-    init?(json: [String: Any])
+    init?(json: JSON)
 }

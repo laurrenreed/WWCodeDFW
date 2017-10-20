@@ -5,7 +5,7 @@
 //  Created by Spencer Prescott on 10/18/17.
 //  Copyright © 2017 WWCode. All rights reserved.
 //
-import Foundation
+import SwiftyJSON
 
 class MediumPost: Model {
     let id: String
@@ -14,28 +14,25 @@ class MediumPost: Model {
     let createdAt: Date
     let author: MediumAuthor
     
-    required init?(json: [String: Any]) {
-        guard let value = json["value"] as? [String: Any],
-            let references = json["references"] as? [String: Any],
-            let id = value["id"] as? String,
-            let title = value["title"] as? String,
-            let slug = value["uniqueSlug"] as? String,
-            let createdAt = value["createdAt"] as? Int,
-            let authorJson = references["User"] as? [String: Any],
-            let author = MediumAuthor(json: authorJson),
-            let content = value["content"] as? [String: Any]
+    required init?(json: JSON) {
+        guard let id = json["value"]["id"].string,
+            let title = json["value"]["title"].string,
+            let slug = json["value"]["uniqueSlug"].string,
+            let createdAt = json["value"]["createdAt"].double,
+            let author = MediumAuthor(json: json["references"]["User"])
             else { return nil }
         
         self.id = id
         self.title = title
         self.slug = slug
-        self.createdAt = Date(timeIntervalSince1970: Double(createdAt))
+        self.createdAt = Date(timeIntervalSince1970: createdAt)
         self.author = author
     }
 }
+//
+//class MediumPostParagraph: Model {
+//    required init?(json: [String: Any]) {
+//
+//    }
+//}
 
-class MediumPostParagraph: Model {
-    required init?(json: [String: Any]) {
-        
-    }
-}

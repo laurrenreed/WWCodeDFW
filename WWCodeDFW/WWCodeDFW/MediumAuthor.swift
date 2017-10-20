@@ -6,7 +6,7 @@
 //  Copyright © 2017 WWCode. All rights reserved.
 //
 
-import Foundation
+import SwiftyJSON
 
 class MediumAuthor: Model {
     let id: String
@@ -14,11 +14,11 @@ class MediumAuthor: Model {
     let username: String?
     let bio: String?
     
-    required init?(json: [String: Any]) {
-        guard let id = json["userId"] as? String else { return nil }
+    required init?(json: JSON) {
+        guard let id = json["userId"].string else { return nil }
         self.id = id
-        self.name = json["name"] as? String
-        self.username = json["username"] as? String
-        self.bio = json["bio"] as? String
+        self.name = json["name"].string
+        self.username = json["username"].string
+        self.bio = json["bio"].string
     }
 }
