@@ -12,6 +12,9 @@ target 'WWCodeDFW' do
 
     # AlamoFire
     pod 'Alamofire', '~> 4.5'
+    
+    # SwiftyJSON
+    pod 'SwiftyJSON'
 
     # SwiftLint 
     pod 'SwiftLint'

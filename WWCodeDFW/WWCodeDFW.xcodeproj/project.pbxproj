@@ -15,6 +15,20 @@
 		6E7B99F21F8BA636006A5343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7B99F01F8BA636006A5343 /* LaunchScreen.storyboard */; };
 		6E7B99FD1F8BA636006A5343 /* WWCodeDFWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B99FC1F8BA636006A5343 /* WWCodeDFWTests.swift */; };
 		6E7B9A081F8BA636006A5343 /* WWCodeDFWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B9A071F8BA636006A5343 /* WWCodeDFWUITests.swift */; };
+		AB50C8BA1F987CAD001B8691 /* MediumPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8B91F987CAD001B8691 /* MediumPost.swift */; };
+		AB50C8BC1F987CB4001B8691 /* MediumPostCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BB1F987CB4001B8691 /* MediumPostCollection.swift */; };
+		AB50C8BE1F988102001B8691 /* MediumPostCollectionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BD1F988102001B8691 /* MediumPostCollectionParser.swift */; };
+		AB50C8C01F9881BD001B8691 /* MediumAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8BF1F9881BD001B8691 /* MediumAuthor.swift */; };
+		AB50C8C21F988B78001B8691 /* medium_post_response.json in Resources */ = {isa = PBXBuildFile; fileRef = AB50C8C11F988B78001B8691 /* medium_post_response.json */; };
+		AB50C8C41F9993A2001B8691 /* MediumPostPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8C31F9993A2001B8691 /* MediumPostPreview.swift */; };
+		AB50C8C81F99AAC9001B8691 /* MediumResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB50C8C71F99AAC9001B8691 /* MediumResourceTests.swift */; };
+		AB50C8CB1F99AE3B001B8691 /* medium_tags_response.json in Resources */ = {isa = PBXBuildFile; fileRef = AB50C8CA1F99AE3B001B8691 /* medium_tags_response.json */; };
+		AB50C8CD1F99AE4A001B8691 /* medium_post_response.json in Resources */ = {isa = PBXBuildFile; fileRef = AB50C8CC1F99AE4A001B8691 /* medium_post_response.json */; };
+		ABAA17671F9859840094B10E /* MediumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17661F9859840094B10E /* MediumService.swift */; };
+		ABAA17691F985AFB0094B10E /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17681F985AFB0094B10E /* ApiService.swift */; };
+		ABAA17711F9860020094B10E /* MediumServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA17701F9860020094B10E /* MediumServiceTests.swift */; };
+		ABAA17741F9860A50094B10E /* medium_tags_response.json in Resources */ = {isa = PBXBuildFile; fileRef = ABAA17731F9860A50094B10E /* medium_tags_response.json */; };
+		ABC62F371F987AF2000BDC75 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC62F361F987AF2000BDC75 /* Model.swift */; };
 		CC5022CB1F8D8CBD00A4EA5E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */; };
 		CC5022CC1F8D8CBD00A4EA5E /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */; };
 		CC5022CD1F8D8CBD00A4EA5E /* NetworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5022CA1F8D8CBC00A4EA5E /* NetworksViewController.swift */; };
@@ -56,6 +70,20 @@
 		6E7B9A091F8BA636006A5343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BCB744A013EC0E3ED63AEBC /* Pods_WWCodeDFW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WWCodeDFW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C717CE2D870C318747D89E /* Pods-WWCodeDFW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WWCodeDFW.release.xcconfig"; path = "Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW.release.xcconfig"; sourceTree = "<group>"; };
+		AB50C8B91F987CAD001B8691 /* MediumPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPost.swift; sourceTree = "<group>"; };
+		AB50C8BB1F987CB4001B8691 /* MediumPostCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPostCollection.swift; sourceTree = "<group>"; };
+		AB50C8BD1F988102001B8691 /* MediumPostCollectionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPostCollectionParser.swift; sourceTree = "<group>"; };
+		AB50C8BF1F9881BD001B8691 /* MediumAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumAuthor.swift; sourceTree = "<group>"; };
+		AB50C8C11F988B78001B8691 /* medium_post_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_post_response.json; sourceTree = "<group>"; };
+		AB50C8C31F9993A2001B8691 /* MediumPostPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumPostPreview.swift; sourceTree = "<group>"; };
+		AB50C8C71F99AAC9001B8691 /* MediumResourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumResourceTests.swift; sourceTree = "<group>"; };
+		AB50C8CA1F99AE3B001B8691 /* medium_tags_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_tags_response.json; sourceTree = "<group>"; };
+		AB50C8CC1F99AE4A001B8691 /* medium_post_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_post_response.json; sourceTree = "<group>"; };
+		ABAA17661F9859840094B10E /* MediumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumService.swift; sourceTree = "<group>"; };
+		ABAA17681F985AFB0094B10E /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		ABAA17701F9860020094B10E /* MediumServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumServiceTests.swift; sourceTree = "<group>"; };
+		ABAA17731F9860A50094B10E /* medium_tags_response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = medium_tags_response.json; sourceTree = "<group>"; };
+		ABC62F361F987AF2000BDC75 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		CC5022C91F8D8CBC00A4EA5E /* JobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		CC5022CA1F8D8CBC00A4EA5E /* NetworksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworksViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +150,9 @@
 		6E7B99E61F8BA636006A5343 /* WWCodeDFW */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA17681F985AFB0094B10E /* ApiService.swift */,
+				ABC62F361F987AF2000BDC75 /* Model.swift */,
+				ABAA17651F98596D0094B10E /* Medium */,
 				6E7B99E71F8BA636006A5343 /* AppDelegate.swift */,
 				CC5022C81F8D8CBC00A4EA5E /* AboutViewController.swift */,
 				CC5022CE1F8D8DB000A4EA5E /* DonationsViewController.swift */,
@@ -130,6 +161,7 @@
 				6E7B99E91F8BA636006A5343 /* HomeViewController.swift */,
 				CC5022D01F8D941E00A4EA5E /* UIViewControllerExtensions.swift */,
 				6E7B99EB1F8BA636006A5343 /* Main.storyboard */,
+				AB50C8C91F99AE20001B8691 /* mock */,
 				6E7B9A161F8BB34F006A5343 /* Resources */,
 			);
 			path = WWCodeDFW;
@@ -138,6 +170,8 @@
 		6E7B99FB1F8BA636006A5343 /* WWCodeDFWTests */ = {
 			isa = PBXGroup;
 			children = (
+				ABAA17721F9860900094B10E /* Fixtures */,
+				ABAA176D1F985FE70094B10E /* Medium */,
 				6E7B99FC1F8BA636006A5343 /* WWCodeDFWTests.swift */,
 				6E7B99FE1F8BA636006A5343 /* Info.plist */,
 			);
@@ -170,6 +204,46 @@
 				95C717CE2D870C318747D89E /* Pods-WWCodeDFW.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB50C8C91F99AE20001B8691 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				AB50C8CA1F99AE3B001B8691 /* medium_tags_response.json */,
+				AB50C8CC1F99AE4A001B8691 /* medium_post_response.json */,
+			);
+			name = mock;
+			sourceTree = "<group>";
+		};
+		ABAA17651F98596D0094B10E /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				AB50C8B91F987CAD001B8691 /* MediumPost.swift */,
+				AB50C8C31F9993A2001B8691 /* MediumPostPreview.swift */,
+				AB50C8BB1F987CB4001B8691 /* MediumPostCollection.swift */,
+				AB50C8BD1F988102001B8691 /* MediumPostCollectionParser.swift */,
+				AB50C8BF1F9881BD001B8691 /* MediumAuthor.swift */,
+				ABAA17661F9859840094B10E /* MediumService.swift */,
+			);
+			name = Medium;
+			sourceTree = "<group>";
+		};
+		ABAA176D1F985FE70094B10E /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA17701F9860020094B10E /* MediumServiceTests.swift */,
+				AB50C8C71F99AAC9001B8691 /* MediumResourceTests.swift */,
+			);
+			path = Medium;
+			sourceTree = "<group>";
+		};
+		ABAA17721F9860900094B10E /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				ABAA17731F9860A50094B10E /* medium_tags_response.json */,
+				AB50C8C11F988B78001B8691 /* medium_post_response.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +358,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7B99F21F8BA636006A5343 /* LaunchScreen.storyboard in Resources */,
+				AB50C8CD1F99AE4A001B8691 /* medium_post_response.json in Resources */,
 				6E7B99EF1F8BA636006A5343 /* Assets.xcassets in Resources */,
+				AB50C8CB1F99AE3B001B8691 /* medium_tags_response.json in Resources */,
 				6E7B99ED1F8BA636006A5343 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAA17741F9860A50094B10E /* medium_tags_response.json in Resources */,
+				AB50C8C21F988B78001B8691 /* medium_post_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,11 +393,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -379,13 +459,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB50C8C41F9993A2001B8691 /* MediumPostPreview.swift in Sources */,
+				AB50C8BC1F987CB4001B8691 /* MediumPostCollection.swift in Sources */,
+				ABAA17671F9859840094B10E /* MediumService.swift in Sources */,
+				AB50C8BA1F987CAD001B8691 /* MediumPost.swift in Sources */,
+				AB50C8C01F9881BD001B8691 /* MediumAuthor.swift in Sources */,
 				CC5022CF1F8D8DB000A4EA5E /* DonationsViewController.swift in Sources */,
 				CC5022CC1F8D8CBD00A4EA5E /* JobsViewController.swift in Sources */,
+				ABC62F371F987AF2000BDC75 /* Model.swift in Sources */,
 				CC5022CB1F8D8CBD00A4EA5E /* AboutViewController.swift in Sources */,
 				6E7B99EA1F8BA636006A5343 /* HomeViewController.swift in Sources */,
+				AB50C8BE1F988102001B8691 /* MediumPostCollectionParser.swift in Sources */,
 				CC5022CD1F8D8CBD00A4EA5E /* NetworksViewController.swift in Sources */,
 				6E7B99E81F8BA636006A5343 /* AppDelegate.swift in Sources */,
 				CC5022D11F8D941E00A4EA5E /* UIViewControllerExtensions.swift in Sources */,
+				ABAA17691F985AFB0094B10E /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +481,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAA17711F9860020094B10E /* MediumServiceTests.swift in Sources */,
+				AB50C8C81F99AAC9001B8691 /* MediumResourceTests.swift in Sources */,
 				6E7B99FD1F8BA636006A5343 /* WWCodeDFWTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
