@@ -15,7 +15,7 @@ enum ApiServiceError: Error {
     case failureRequestError
 }
 
-typealias ApiResult<T> = Result<T, Error>
+typealias ApiResult<T> = Result<T, ApiServiceError>
 
 protocol Resource {
     /// HTTP Method the API request will use
