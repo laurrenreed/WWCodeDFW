@@ -19,7 +19,7 @@ class MediumPostCollectionParser {
         let postsArray = postsJson
         let pagingJson = json["paging"]
         
-        let postPreviewsJson = postsArray.flatMap { (postJson) -> JSON? in
+      let postPreviewsJson = postsArray.compactMap { (postJson) -> JSON? in
             guard let authorId = postJson["creatorId"].string else { return nil }
             
             var json = postJson

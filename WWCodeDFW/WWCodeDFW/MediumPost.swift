@@ -30,7 +30,7 @@ class MediumPost: Model {
         self.createdAt = Date(timeIntervalSince1970: createdAt)
         self.author = author
         self.paragraphs = (json["value"]["content"]["bodyModel"]["paragraphs"].array ?? [])
-            .flatMap { MediumPostParagraph(json: $0) }
+          .compactMap { MediumPostParagraph(json: $0) }
     }
 }
 

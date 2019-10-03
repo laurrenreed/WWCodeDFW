@@ -258,7 +258,6 @@
 				6E7B99E11F8BA636006A5343 /* Frameworks */,
 				6E7B99E21F8BA636006A5343 /* Resources */,
 				11A4C475C8D8673C3D9C531C /* [CP] Embed Pods Frameworks */,
-				28C5FE35F8C996A2B15DD9CE /* [CP] Copy Pods Resources */,
 				6E7B9A151F8BAFF0006A5343 /* ShellScript */,
 			);
 			buildRules = (
@@ -337,6 +336,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -390,7 +390,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -403,22 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28C5FE35F8C996A2B15DD9CE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WWCodeDFW/Pods-WWCodeDFW-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E7B9A151F8BAFF0006A5343 /* ShellScript */ = {
@@ -635,7 +620,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WWC.WWCodeDFW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -649,7 +634,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WWC.WWCodeDFW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

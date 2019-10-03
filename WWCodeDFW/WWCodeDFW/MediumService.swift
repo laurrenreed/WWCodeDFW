@@ -60,7 +60,7 @@ enum MediumResource: Resource {
         // strip security json prefix from Medium's json response
         let strippedString = string.replacingOccurrences(of: "])}while(1);</x>", with: "")
         if let strippedData = strippedString.data(using: .utf8) {
-            return JSON(data: strippedData)
+            return try? JSON(data: strippedData)
         }
         
         return nil
@@ -74,17 +74,18 @@ class MediumService {
      * json fixtures stored on disk instead of actually make a request to Medium's API
      * (ex: let service = MediumService(apiService: MediumService.OfflineTestingApiService()))
      */
-    class OfflineTestingApiService: ApiServicing {
+  class OfflineTestingApiService: ApiServicing {
+
         func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void) {
             guard let mediumResource = resource as? MediumResource else {
                 assertionFailure("[OfflineTestingApiService] Requires parameterized resource to be of type MediumResource")
-                responseHandler(ApiResult.failure(ApiServiceError.invalidResourceError))
+                responseHandler(.failure(ApiServiceError.invalidResourceError))
                 return
             }
             if let model = mockModel(for: mediumResource) {
-                responseHandler(ApiResult.success(model))
+                responseHandler(.success(model))
             } else {
-                responseHandler(ApiResult.failure(ApiServiceError.modelParsingError))
+                responseHandler(.failure(ApiServiceError.modelParsingError))
             }
         }
         

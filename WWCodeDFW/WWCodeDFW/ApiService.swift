@@ -12,30 +12,10 @@ import Alamofire
 enum ApiServiceError: Error {
     case modelParsingError
     case invalidResourceError
+    case failureRequestError
 }
 
-enum ApiResult<T> {
-    case success(T)
-    case failure(Error)
-    
-    var value: T? {
-        switch self {
-        case .success(let value):
-            return value
-        case .failure:
-            return nil
-        }
-    }
-    
-    var error: Error? {
-        switch self {
-        case .success:
-            return nil
-        case .failure(let error):
-            return error
-        }
-    }
-}
+typealias ApiResult<T> = Result<T, ApiServiceError>
 
 protocol Resource {
     /// HTTP Method the API request will use
@@ -61,13 +41,14 @@ class ApiService: ApiServicing {
             switch response.result {
             case .success(let data):
                 if let model = resource.parse(responseData: data) {
-                    responseHandler(ApiResult.success(model))
+                    responseHandler(.success(model))
                 } else {
                     print("[ApiService] Resource failed to parse model: \(resource)")
-                    responseHandler(ApiResult.failure(ApiServiceError.modelParsingError))
+                    responseHandler(.failure(ApiServiceError.modelParsingError))
                 }
             case .failure(let error):
-                responseHandler(ApiResult.failure(error))
+              print("[ApiService] Request has been failed due to: ", error.localizedDescription)
+              responseHandler(.failure(ApiServiceError.failureRequestError))
             }
         }
     }
@@ -75,7 +56,7 @@ class ApiService: ApiServicing {
     // MARK: Helpers
     
     private func request(for resource: Resource) -> DataRequest {
-        return Alamofire.request(resource.url,
+        return AF.request(resource.url,
                                  method: resource.method,
                                  parameters: nil,
                                  encoding: parameterEncoding(for: resource),
