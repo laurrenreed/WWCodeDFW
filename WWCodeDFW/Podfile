@@ -8,10 +8,10 @@ target 'WWCodeDFW' do
   # Pods for WWCodeDFW
 
     # SnapKit
-    pod 'SnapKit', '~> 3.0.0’
+    pod 'SnapKit', '~> 5.0.0'
 
     # AlamoFire
-    pod 'Alamofire', '~> 4.5'
+    pod 'Alamofire'
     
     # SwiftyJSON
     pod 'SwiftyJSON'

@@ -20,7 +20,7 @@ extension UIViewController {
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
-    func donate() {
+  @objc func donate() {
         let donateVC = DonationsViewController()
         donateVC.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(donateVC, animated: true)

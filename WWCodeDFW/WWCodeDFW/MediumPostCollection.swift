@@ -15,8 +15,8 @@ class MediumPostCollection: Model {
     required init?(json: JSON) {
         guard let parser = MediumPostCollectionParser(json: json)
             else { return nil }
-        
-        self.postPreviews = parser.postPreviewsJson.flatMap { MediumPostPreview(json: $0) }
+
+        self.postPreviews = parser.postPreviewsJson.compactMap { MediumPostPreview(json: $0) }
         self.pagingInformation = parser.pagingJson
     }
 }

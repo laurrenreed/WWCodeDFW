@@ -60,7 +60,7 @@ enum MediumResource: Resource {
         // strip security json prefix from Medium's json response
         let strippedString = string.replacingOccurrences(of: "])}while(1);</x>", with: "")
         if let strippedData = strippedString.data(using: .utf8) {
-            return JSON(data: strippedData)
+            return try? JSON(data: strippedData)
         }
         
         return nil
