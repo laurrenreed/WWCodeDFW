@@ -12,29 +12,7 @@ import Alamofire
 enum ApiServiceError: Error {
     case modelParsingError
     case invalidResourceError
-}
-
-enum ApiResult<T> {
-    case success(T)
-    case failure(Error)
-    
-    var value: T? {
-        switch self {
-        case .success(let value):
-            return value
-        case .failure:
-            return nil
-        }
-    }
-    
-    var error: Error? {
-        switch self {
-        case .success:
-            return nil
-        case .failure(let error):
-            return error
-        }
-    }
+    case failureRequestError
 }
 
 protocol Resource {
@@ -50,24 +28,25 @@ protocol Resource {
 
 protocol ApiServicing {
     /// Makes a network request to the parameterized Resource and responseds with the parsed Model object
-    func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void)
+    func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void)
 }
 
 class ApiService: ApiServicing {
     static let shared = ApiService()
     
-    func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void) {
+    func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
         request(for: resource).responseData { (response) in
             switch response.result {
             case .success(let data):
                 if let model = resource.parse(responseData: data) {
-                    responseHandler(ApiResult.success(model))
+                    responseHandler(.success(model))
                 } else {
                     print("[ApiService] Resource failed to parse model: \(resource)")
-                    responseHandler(ApiResult.failure(ApiServiceError.modelParsingError))
+                    responseHandler(.failure(ApiServiceError.modelParsingError))
                 }
             case .failure(let error):
-                responseHandler(ApiResult.failure(error))
+              print("[ApiService] Request has been failed due to: ", error.localizedDescription)
+              responseHandler(.failure(ApiServiceError.failureRequestError))
             }
         }
     }
@@ -75,7 +54,7 @@ class ApiService: ApiServicing {
     // MARK: Helpers
     
     private func request(for resource: Resource) -> DataRequest {
-        return Alamofire.request(resource.url,
+        return AF.request(resource.url,
                                  method: resource.method,
                                  parameters: nil,
                                  encoding: parameterEncoding(for: resource),

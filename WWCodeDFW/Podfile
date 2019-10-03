@@ -11,7 +11,7 @@ target 'WWCodeDFW' do
     pod 'SnapKit', '~> 5.0.0'
 
     # AlamoFire
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 5.0.0-rc.2'
     
     # SwiftyJSON
     pod 'SwiftyJSON'

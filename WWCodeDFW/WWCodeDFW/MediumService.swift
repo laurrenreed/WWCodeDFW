@@ -75,16 +75,16 @@ class MediumService {
      * (ex: let service = MediumService(apiService: MediumService.OfflineTestingApiService()))
      */
     class OfflineTestingApiService: ApiServicing {
-        func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void) {
+        func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
             guard let mediumResource = resource as? MediumResource else {
                 assertionFailure("[OfflineTestingApiService] Requires parameterized resource to be of type MediumResource")
-                responseHandler(ApiResult.failure(ApiServiceError.invalidResourceError))
+                responseHandler(.failure(ApiServiceError.invalidResourceError))
                 return
             }
             if let model = mockModel(for: mediumResource) {
-                responseHandler(ApiResult.success(model))
+                responseHandler(.success(model))
             } else {
-                responseHandler(ApiResult.failure(ApiServiceError.modelParsingError))
+                responseHandler(.failure(ApiServiceError.modelParsingError))
             }
         }
         
@@ -112,7 +112,7 @@ class MediumService {
     }
     
     /// Makes a network call to Medium for the parameterized resource and parses the response into a Model
-    func sendRequest(for resource: MediumResource, completionHandler: @escaping (ApiResult<Model>) -> Void) {
+    func sendRequest(for resource: MediumResource, completionHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
         apiService.load(resource: resource, responseHandler: completionHandler)
     }
 }
