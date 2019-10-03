@@ -74,8 +74,9 @@ class MediumService {
      * json fixtures stored on disk instead of actually make a request to Medium's API
      * (ex: let service = MediumService(apiService: MediumService.OfflineTestingApiService()))
      */
-    class OfflineTestingApiService: ApiServicing {
-        func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
+  class OfflineTestingApiService: ApiServicing {
+
+        func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void) {
             guard let mediumResource = resource as? MediumResource else {
                 assertionFailure("[OfflineTestingApiService] Requires parameterized resource to be of type MediumResource")
                 responseHandler(.failure(ApiServiceError.invalidResourceError))
@@ -112,7 +113,7 @@ class MediumService {
     }
     
     /// Makes a network call to Medium for the parameterized resource and parses the response into a Model
-    func sendRequest(for resource: MediumResource, completionHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
+    func sendRequest(for resource: MediumResource, completionHandler: @escaping (ApiResult<Model>) -> Void) {
         apiService.load(resource: resource, responseHandler: completionHandler)
     }
 }

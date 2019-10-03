@@ -15,6 +15,8 @@ enum ApiServiceError: Error {
     case failureRequestError
 }
 
+typealias ApiResult<T> = Result<T, Error>
+
 protocol Resource {
     /// HTTP Method the API request will use
     var method: HTTPMethod { get }
@@ -28,13 +30,13 @@ protocol Resource {
 
 protocol ApiServicing {
     /// Makes a network request to the parameterized Resource and responseds with the parsed Model object
-    func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void)
+    func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void)
 }
 
 class ApiService: ApiServicing {
     static let shared = ApiService()
     
-    func load(resource: Resource, responseHandler: @escaping (Result<Model, ApiServiceError>) -> Void) {
+    func load(resource: Resource, responseHandler: @escaping (ApiResult<Model>) -> Void) {
         request(for: resource).responseData { (response) in
             switch response.result {
             case .success(let data):
